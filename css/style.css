@@ -16,11 +16,18 @@ body{
 
 img{
     width: 100%;
+    /* mobil için kontrol et */
+    padding: 100px 0px;
+    
 }
 
 section{
     padding: 100px, 0px;
     background-color: #122e44;
+}
+
+.section_title{
+    margin-bottom: 30px;
 }
 
 .section_title h2{
@@ -36,7 +43,7 @@ section{
 
 header{
     background-color: #000;
-    border-bottom: 1px solid rgb(238,238, 0.801);
+    border-bottom: 1px solid #fff;
     position: fixed;
     width:100%;
     z-index: 5;
@@ -53,7 +60,7 @@ header{
     display: flex;
 }
 .nav_links li a{
-    margin-left: 15px;
+    margin-left: 40px;
     color: #fff;
     padding: 5px 15px;
     border-radius: 5px;
@@ -64,5 +71,43 @@ header{
 }
 .logo h2 a{
     color: #fff;
-    text-transform: uppercase;
+    
+}
+
+/* ANASAYFA */
+.inner_anasayfa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    color: #fff;
+}
+.child_anasayfa{
+    flex-basis: 45%;
+}
+.child_anasayfa h1{
+    font-size: 50px;
+    color: #24CAAC;
+}
+.span_child{
+    color: #e0376f;
+}
+.child_anasayfa p{
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+.btn{
+    background-color: #24CAAC;
+    padding: 12px 28px;
+    border-radius: 20px;
+    color: #fff;
+    border: 1px solid #24CAAC;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.btn:hover{
+    background-color: transparent;
+    letter-spacing: 2px;
 }

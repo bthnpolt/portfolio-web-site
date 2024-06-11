@@ -253,3 +253,55 @@ header{
     transform: scale(1.05);
     border: 1px solid #24CAAC;
 }
+
+/* İLETİŞİM */
+.inner_communication{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.child_communication{
+    flex-basis: 46%;
+}
+
+.child_communication form{
+    padding: 50px 40px;
+    background-color: #2F363e;
+    border-radius: 5px;
+}
+.child_communication form input,textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #24292D;
+    border: none;
+    resize: none;
+    border-radius: 25px;
+    transition: .3s ease-in;
+    color: #fff;
+}
+.child_communication form input,textarea:focus{
+    color: #fff;
+    
+}
+.child_communication form input:focus{
+    letter-spacing: 1px;
+}
+.child_communication form textarea:focus{
+    letter-spacing: 1px;
+}
+.child_communication form input:last-child{
+    margin-bottom: 0;
+    background-color: #24CAAC;
+    border: 1px solid #24CAAC;
+    transition: .3s;    
+}
+.child_communication form input:last-child:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+

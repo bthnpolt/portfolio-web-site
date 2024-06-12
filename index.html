@@ -10,6 +10,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="./js/Alert.js"></script>
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+         <script type="text/javascript">
+    
+            (function() {
+                
+                emailjs.init({
+                  publicKey: "qiROhvkOJ0emjb2Ko",
+                });
+            })();
+        </script>
+         <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                   
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(() => {
+                            alert('Mesajınız başarıyla gönderildi!', 'success', 3000);
+                        }, (error) => {
+                            alert('Mesajınız gönderilemedi lütfen daha sonra tekrar deneyin!', 'error', 3000);
+                        });
+                });
+            }
+        </script>
 </head>
 <body>
     <header>
@@ -248,33 +274,8 @@
             <p>ernursan makina. &copy; 2024. Tüm Hakları Saklıdır. </p>
          </footer>
 
-         <!-- js cod -->
+         
 
-         <script src="./js/Alert.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-         <script type="text/javascript">
-    
-            (function() {
-                
-                emailjs.init({
-                  publicKey: "qiROhvkOJ0emjb2Ko",
-                });
-            })();
-        </script>
-         <script type="text/javascript">
-            window.onload = function() {
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                   
-                    emailjs.sendForm('contact_service', 'contact_form', this)
-                        .then(() => {
-                            alert('Mesajınız başarıyla gönderildi!', 'success', 3000);
-                        }, (error) => {
-                            alert('Mesajınız gönderilemedi lütfen daha sonra tekrar deneyin!', 'error', 3000);
-                        });
-                });
-            }
-        </script>
+         
 </body>
 </html>

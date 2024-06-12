@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ernursan makina | Demir-Büküm</title>
+    <script src="./js/Alert.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
+    
         (function() {
             
             emailjs.init({
@@ -17,16 +19,17 @@
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                
+               
                 emailjs.sendForm('contact_service', 'contact_form', this)
                     .then(() => {
-                        alert('Mesajınız başarıyla gönderildi!');
+                        alert('Mesajınız başarıyla gönderildi!', 'success', 3000);
                     }, (error) => {
-                        alert('Mesaj gönderilemedi. Hata: ' + JSON.stringify(error));
+                        alert('Mesajınız gönderilemedi lütfen daha sonra tekrar deneyin!', 'error', 3000);
                     });
             });
         }
     </script>
+    
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fontsawesome-all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -221,10 +224,10 @@
                 </div>
                 <div class="child_communication">
                     <form id="contact-form">
-                        <input type="hidden" name="contact_number" value="697483">
-                        <input type="text"  name="user_name"  placeholder="isim-soyisim">
-                        <input type="text"  name="user_email"  placeholder="email">
-                        <textarea name="message" placeholder="mesaj" rows="10" cols="30"></textarea>
+                        <input type="hidden" name="contact_number" required value="697483">
+                        <input type="text"  name="user_name" id="user_name" required  placeholder="isim-soyisim">
+                        <input type="text"  name="user_email" id="user_email" required placeholder="email">
+                        <textarea name="message" placeholder="mesaj" required  id="message" rows="10" cols="30"></textarea>
                         <input type="submit" value="Gönder" >
                     </form>
                 </div>

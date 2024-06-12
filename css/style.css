@@ -50,6 +50,9 @@ header{
     width:100%;
     z-index: 5;
 }
+#menu_bar{
+    display: none;
+}
 .navbar{
     display: flex;
     flex-wrap: wrap;
@@ -303,6 +306,7 @@ header{
     background-color: transparent;
     color: #fff;
 }
+/* ALERT */
 .alert {
     text-align: center;
     font-weight: bold;
@@ -321,5 +325,59 @@ header{
 .alert.info {
     background-color: #2196F3; 
 }
-
+/* FOOTER */
+footer{
+    background-color: #24292D;
+    padding: 60px 0px 20px 0px;
+    color: #fff;
+    text-align: center;
+}
+.inner_footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 80%;
+}
+.child_footer{
+    flex-basis: 20%;
+}
+.child_footer h3{
+    margin-bottom: 20px;
+}
+.child_footer .footer_social{
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+.child_footer ul li{
+    flex-basis: 15%;
+}
+.child_footer ul li a{
+    color: #fff;
+}
+footer p{
+    margin-top: 20px;
+    font-size: 10px;
+}
+.quick_links{
+    display: flex;
+    flex-direction: column;
+}
+.quick_links a:hover{
+    text-decoration: underline;
+}
+.footer_contact i{
+   display: flex;
+   flex-wrap: wrap;
+}
+.footer_contact p{
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.footer_contact{
+    margin-left: 19%;
+}
 

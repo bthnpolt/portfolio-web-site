@@ -4,32 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ernursan makina | Demir-Büküm</title>
-    <script src="./js/Alert.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-    
-        (function() {
-            
-            emailjs.init({
-              publicKey: "qiROhvkOJ0emjb2Ko",
-            });
-        })();
-    </script>
-     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-               
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(() => {
-                        alert('Mesajınız başarıyla gönderildi!', 'success', 3000);
-                    }, (error) => {
-                        alert('Mesajınız gönderilemedi lütfen daha sonra tekrar deneyin!', 'error', 3000);
-                    });
-            });
-        }
-    </script>
-    
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fontsawesome-all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,10 +13,8 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <h2><a href="#">ERNURSAN MAKİNA</a></h2>
-            </div>
+        <nav class="navbar">
+            <div class="logo"><h2><a href="#">ernursan makina</a></h2></div>
             <ul class="nav_links">
                 <li><a href="#anasayfa">Anasayfa</a></li>
                  <li><a href="#hizmetlerimiz">Hizmetlerimiz</a></li> 
@@ -50,6 +23,9 @@
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
+        </nav>
+        <div id="menu_bar">
+            <i class="fas fa-bars"></i>
         </div>
     </header>
     <!-- ANASAYFA -->
@@ -233,5 +209,72 @@
                 </div>
             </div>
         </section>
+
+        <!-- FOOTER -->
+         <footer>
+            <div class="inner_footer">
+                <div class="child_footer">
+                    <h3>İletişim Bilgileri</h3>
+                    <div class="footer_contact">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>lorem ipsum sit dolar amet</p>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>00000000000</p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>aaaaaa@gmail.com</p>
+                     <ul class="footer_social">
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                     </ul>
+                    </div>
+                    
+                </div>
+                <div class="child_footer">
+                    <h3>Site Haritası</h3>
+                    <ul class="quick_links">
+                        <li><a href="#anasayfa">Anasayfa</a></li>
+                        <li><a href="#hizmetlerimiz">Hizmetlerimiz</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#basarilar">Başarılarımız</a></li>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="child_footer">
+                    <img src="./img/home_img.jpg" alt="">
+                </div>
+            </div>
+            <p>ernursan makina. &copy; 2024. Tüm Hakları Saklıdır. </p>
+         </footer>
+
+         <!-- js cod -->
+
+         <script src="./js/Alert.js"></script>
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+         <script type="text/javascript">
+    
+            (function() {
+                
+                emailjs.init({
+                  publicKey: "qiROhvkOJ0emjb2Ko",
+                });
+            })();
+        </script>
+         <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                   
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(() => {
+                            alert('Mesajınız başarıyla gönderildi!', 'success', 3000);
+                        }, (error) => {
+                            alert('Mesajınız gönderilemedi lütfen daha sonra tekrar deneyin!', 'error', 3000);
+                        });
+                });
+            }
+        </script>
 </body>
 </html>

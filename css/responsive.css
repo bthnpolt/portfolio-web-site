@@ -23,4 +23,20 @@
         border-radius: 2px;
         cursor: pointer;
     }
+
+    .nav_links{
+        flex-direction: column;
+        position: absolute;
+        background-color: #24292D;
+        width: 100%;
+        left: 0;
+        padding: 0;
+    }
+    .nav_links li  {
+       padding: 10px 0;
+       border-bottom: 1px solid #fff;
+       display: block;
+       border-radius: 0;
+       margin: 0 20px;
+    }
 }
